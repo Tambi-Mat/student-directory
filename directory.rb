@@ -1,21 +1,23 @@
-# Assign the value 11 into the variable student_count. So there is no source of confusion later.
-student_count = 11
+# create an array and list all students
+students = [ "Dr. Hannibal Lecter",
+  "Lord Vader",
+  "Nurse Ratched",
+  "Michael 'The Don' Corleone",
+  "Alex DeLarge",
+  "The Wicked Witch of the West",
+  "Terminator",
+  "Freddy Krueger",
+  "The Joker",
+  "Jeffory Baratheon",
+  "Norman Bates"]
 
-# First we print the list of Students
-
+# now print out all the students
 puts "The Students of Villians Academy"
-puts "------------------------"
-puts "Dr. Hannibal Lecter"
-puts "Lord Vader"
-puts "Nurse Ratched"
-puts "Michael 'The Don' Corleone"
-puts "Alex DeLarge"
-puts "The Wicked Witch of the West"
-puts "Terminator"
-puts "Freddy Krueger"
-puts "The Joker"
-puts "Jeffory Baratheon"
-puts "Norman Bates"
+puts "-------------------------"
 
-# Finally we print the total number of students. Use string interpolation with #{}
-puts "Overall, we have #{student_count} great students"
+# iterate through the array using the {} method as opposed to the do..end method
+students.each { |name| puts name}
+
+# Finally we print the total number of students. Use string interpolation with
+# Also use the .count method to add up the number of students
+puts "Overall, we have #{students.count} great students!"
