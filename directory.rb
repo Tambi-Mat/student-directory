@@ -1,15 +1,15 @@
-# create an array and list all students
-students = [ "Dr. Hannibal Lecter",
-  "Lord Vader",
-  "Nurse Ratched",
-  "Michael 'The Don' Corleone",
-  "Alex DeLarge",
-  "The Wicked Witch of the West",
-  "Terminator",
-  "Freddy Krueger",
-  "The Joker",
-  "Jeffory Baratheon",
-  "Norman Bates"]
+# create a hash in an array with key(name)/value(cohort date) pair
+students = [ {name: "Dr. Hannibal Lecter", cohort: :november},
+  {name: "Lord Vader", cohort: :november},
+  {name: "Nurse Ratched", cohort: :november},
+  {name: "Michael 'The Don' Corleone", cohort: :november},
+  {name: "Alex DeLarge", cohort: :november},
+  {name: "The Wicked Witch of the West", cohort: :november},
+  {name: "Terminator", cohort: :november},
+  {name: "Freddy Krueger", cohort: :november},
+  {name: "The Joker", cohort: :november},
+  {name: "Jeffory Baratheon", cohort: :november},
+  {name: "Norman Bates", cohort: :november} ]
 
 # print out the header using a method
 def print_header
@@ -18,13 +18,13 @@ def print_header
 end
 
 # create a method (with names parameter) for method call
-def print(names)
-  names.each { |name| puts name}
+def print(students)
+  students.each { |student| puts "#{student[:name]} (#{student[:cohort]} cohort)" }
 end
 
 # print out student count using a method print_footer
-def print_footer(names)
-  puts "Overall, we have #{names.count} great students!"
+def print_footer(students)
+  puts "Overall, we have #{students.count} great students!"
 end
 
 # now we need to CALL THE METHODS (using arguements) to execute our code
