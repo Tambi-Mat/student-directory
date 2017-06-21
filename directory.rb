@@ -18,10 +18,6 @@ def print_header
   puts "-------------------------"
 end
 
-# create a method (with names parameter) for method call
-def print(students)
-  students.each { |student| puts "#{student[:name]} (#{student[:cohort]} cohort)" }
-end
 
 # create a method asking for user input
 def input_students
@@ -46,6 +42,12 @@ def input_students
 
   # return the array of students
   return students
+end
+
+
+# create a method (with names parameter) for method call
+def print(students)
+  students.each_with_index { |(student), index| puts " #{index += 1}: #{student[:name]} (#{student[:cohort]} cohort)" }
 end
 
 
