@@ -11,13 +11,23 @@ students = [ "Dr. Hannibal Lecter",
   "Jeffory Baratheon",
   "Norman Bates"]
 
-# now print out all the students
-puts "The Students of Villians Academy"
-puts "-------------------------"
+# print out the header using a method
+def print_header
+  puts "The Students of Villians Academy"
+  puts "-------------------------"
+end
 
-# iterate through the array using the {} method as opposed to the do..end method
-students.each { |name| puts name}
+# create a method (with names parameter) for method call
+def print(names)
+  names.each { |name| puts name}
+end
 
-# Finally we print the total number of students. Use string interpolation with
-# Also use the .count method to add up the number of students
-puts "Overall, we have #{students.count} great students!"
+# print out student count using a method print_footer
+def print_footer(names)
+  puts "Overall, we have #{names.count} great students!"
+end
+
+# now we need to CALL THE METHODS (using arguements) to execute our code
+print_header
+print(students)
+print_footer(students)
