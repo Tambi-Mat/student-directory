@@ -145,6 +145,7 @@ def load_students(filename = "students.csv")
     end
     # then we close the file. Always do this after opening up a file.
     file.close
+    puts @students
 end
 
 
